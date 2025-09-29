@@ -14,7 +14,8 @@ process QUAST{
 
     shell:
     """ 
-    quast.py -t $task.cpus -r $ref_genome -o $genome.baseName $genome
+    quast.py -t $task.cpus -r $ref_genome -o $genome.baseName --labels ${genome.baseName} $genome
+
     """
 
 }
